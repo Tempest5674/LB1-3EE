@@ -1,6 +1,5 @@
 package dao;
 
-import classes.Car;
 import classes.Client;
 import interfaces.DAO;
 import org.hibernate.search.query.dsl.QueryBuilder;

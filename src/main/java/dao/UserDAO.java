@@ -1,6 +1,5 @@
 package dao;
 
-import classes.Client;
 import classes.User;
 import interfaces.DAO;
 import org.hibernate.Session;
