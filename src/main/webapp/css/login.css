@@ -1,0 +1,85 @@
+.outer
+{
+	text-align: center;
+	margin-top: 25px;
+	width: 100%;
+	margin-left: 32%;
+}
+
+.inner1{
+	background-image: url(images/login.jpg);
+	border-style: solid;
+	border-width: 1px;
+	margin: 10%;
+	height: 338px;
+	width: 338px;
+}
+.container{
+	margin-top: 10%;
+	padding: 25px 25px 10px 25px;
+}
+label {
+	float: left;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.btnLogin,
+.btnRegister{
+	margin-top: 5px;
+	background-color: #FFD700;
+	border: none;
+    color: white;
+	height: 50px;
+	border-radius: 8px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+.btnLogin{
+	width: 30%;
+}
+
+.btnRegister{
+	width: 60%;
+}
+
+.btnLogin span,
+.btnRegister span{
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.75s;
+}
+
+.btnLogin span:after,
+.btnRegister span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btnLogin:hover span,
+.btnRegister:hover span{
+  padding-right: 25px;
+}
+
+.btnLogin:hover span:after,
+.btnRegister:hover span:after {
+  opacity: 1;
+  right: 0;
+}

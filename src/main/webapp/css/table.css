@@ -1,0 +1,177 @@
+.select-area{
+	width: 30%;
+	font-family: Arial;
+	overflow: hidden;
+}
+
+.select-area select{
+	margin-top: 15px;
+	margin-left: 2px;
+	appearance: none;
+	background-image: url(images/selectArrow.png);
+	border-style: none;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #ffffff;
+	padding-left: 5px;
+}
+.other{
+	color: #000000;
+}
+.search-area{
+	width: 50%;
+	overflow: hidden;
+}
+
+.myInput{
+	margin-top: 12px;
+	font-size: 0.9em;
+	font-weight: bold;
+	height: 26px;
+}
+
+.search-icon{
+	width: 16%;
+	overflow: hidden;
+}
+
+.select-area,
+.search-area,
+.search-icon{
+	height: 45px;
+	display: inline-block;
+}
+
+.content-table{ 
+	border-collapse: collapse;
+	font-size: 0.9em;
+    max-height: 250px;
+    display: block;
+  	overflow-y: scroll;
+  	max-width: 400px;
+}
+
+.content-table thead tr{
+	background-color: #FFD700;
+	color: #ffffff;
+	text-align: left;
+	font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+	padding: 12px 15px;
+}
+
+.content-table tbody tr {
+	border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+	border-bottom: 2px solid #FFD700;
+}
+
+.outer{
+	width: 400px;
+	margin:15%;
+	margin-left: 38%;
+	padding: 5px;
+
+	border-style: solid;
+	border-width: 2.5px;
+	border-color: #FFD700;
+}
+
+.area-under-table{
+	width: 400px;
+	height: 50px;
+	background: #FFD700;
+	margin-bottom: 5px;
+}
+
+.btnRemove{
+	background-image: url(images/removeIcon.png);
+	height: 20px;
+	border-style: none;
+	width: 20px;
+}
+
+.btnEdit{
+	background-image: url(images/editIcon.png);
+	height: 20px;
+	border-style: none;
+	width: 20px;
+}
+
+.btnRemoveG{
+	background-image: url(images/removeIconG.png);
+	height: 20px;
+	border-style: none;
+	width: 20px;
+}
+
+.btnEditG{
+	background-image: url(images/editIconG.png);
+	height: 20px;
+	border-style: none;
+	width: 20px;
+}
+
+.btnSearch{
+	background-image: url(images/searchIcon.png);
+	height: 40px;
+	border-style: none;
+	width: 40px;
+	margin-left: 12px;
+	margin-top: 3px;
+}
+
+.add-area{
+	margin-top: 25px;
+}
+
+.add-table{
+	border-collapse: collapse;
+	font-size: 0.9em;
+    max-height: 250px;
+    display: block;
+  	overflow-y: scroll;
+  	max-width: 400px;
+}
+.add-table thead tr{
+	background-color: #FFD700;
+	color: #ffffff;
+	text-align: left;
+	font-weight: bold;
+}
+
+.add-table th,
+.add-table td{
+	padding: 12px 15px;
+}
+
+.add-table tbody tr{
+	border-bottom: 1px solid #dddddd;
+}
+
+
+.add-table tbody tr:last-of-type {
+	border-bottom: 2px solid #FFD700;
+}
+
+.myInputAdd{
+	width: 100%;
+	font-weight: bold;
+	border-width: 0 0 1 0;
+}
+
+.btnAdd{
+	background-image: url(images/addIcon.png);
+	height: 20px;
+	border-style: none;
+	width: 20px;
+}

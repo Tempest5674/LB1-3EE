@@ -1,0 +1,55 @@
+.outer{
+	width: 400px;
+	margin:15%;
+	margin-left: 38%;
+	padding: 5px;
+
+	border-style: solid;
+	border-width: 2.5px;
+	border-color: #FFD700;
+}
+.btnEdit{
+	background-image: url(images/editIcon.png);
+	height: 20px;
+	border-style: none;
+	width: 20px;
+}
+
+.edit-area{
+	margin-top: 25px;
+}
+
+.edit-table{
+	border-collapse: collapse;
+	font-size: 0.9em;
+    max-height: 250px;
+    display: block;
+  	overflow-y: scroll;
+  	max-width: 400px;
+}
+.edit-table thead tr{
+	background-color: #FFD700;
+	color: #ffffff;
+	text-align: left;
+	font-weight: bold;
+}
+
+.edit-table th,
+.edit-table td{
+	padding: 12px 15px;
+}
+
+.edit-table tbody tr{
+	border-bottom: 1px solid #dddddd;
+}
+
+
+.edit-table tbody tr:last-of-type {
+	border-bottom: 2px solid #FFD700;
+}
+
+.myInputEdit{
+	width: 100%;
+	font-weight: bold;
+	border-width: 0 0 1 0;
+}
