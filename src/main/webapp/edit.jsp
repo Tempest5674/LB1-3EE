@@ -24,7 +24,7 @@
         </tr>
         </thead>
         <tbody>
-        <form action="${pageContext.request.contextPath}/servlets.insertServlet" method="post">
+        <form action="${pageContext.request.contextPath}/servlets.editServlet" method="post">
             <input type="hidden" name="tableName" value="${chosenTable}">
             <input type="hidden" name="idToEdit" value="${idToEdit}">
             <tr>
