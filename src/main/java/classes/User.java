@@ -7,6 +7,7 @@ import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.Store;
 import org.hibernate.annotations.NamedQuery;
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -29,6 +30,7 @@ public class User {
     @NotNull
     String password;
 
+    @Min(0)
     int role;
     public User(int id, String login, String password, int role) {
         this.id = id;
