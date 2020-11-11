@@ -7,10 +7,7 @@ import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.Store;
 import org.hibernate.annotations.NamedQuery;
 import javax.persistence.*;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @Entity
 @NamedQuery(name = "Select all users",query = "from User")
@@ -30,6 +27,7 @@ public class User {
     @NotNull
     String password;
 
+    @Max(1)
     @Min(0)
     int role;
     public User(int id, String login, String password, int role) {
