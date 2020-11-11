@@ -60,9 +60,4 @@ public class User {
         return role;
     }
 
-    public void asd(){
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("client-persistence-unit");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.createNamedQuery("Select all users",User.class);
-    }
 }
