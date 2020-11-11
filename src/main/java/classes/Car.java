@@ -1,19 +1,34 @@
 package classes;
 
+import interfaces.CarSeatsConstraint;
+import org.hibernate.annotations.NamedQuery;
+import org.hibernate.search.annotations.Analyze;
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Index;
+import org.hibernate.search.annotations.Store;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.xml.transform.Source;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NamedQuery(name = "Select all cars",query = "from Car")
 @Table(name = "car")
-public class Car {
+public class Car{
     @Id
     int id;
 
+    @Field(index= Index.YES, analyze= Analyze.YES, store= Store.NO)
     public String carModel;
+
+    @CarSeatsConstraint
+    @Field(index= Index.YES, analyze= Analyze.YES, store= Store.NO)
     public int seats;
+
+    @Field(index= Index.YES, analyze= Analyze.YES, store= Store.NO)
     public int costPerDay;
 
     public Car(int id, String carModel, int seats, int costPerDay) {

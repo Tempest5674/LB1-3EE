@@ -2,13 +2,11 @@ package dao;
 
 import classes.User;
 import interfaces.DAO;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.search.FullTextSession;
-import org.hibernate.search.Search;
+import org.hibernate.*;
+import org.hibernate.query.Query;
+import org.hibernate.search.*;
 import org.hibernate.search.query.dsl.QueryBuilder;
 import utils.HibernateSessionFactoryUtil;
-
 import java.util.List;
 
 public class UserDAO implements DAO<User> {
@@ -68,5 +66,15 @@ public class UserDAO implements DAO<User> {
     public List<User> findAll() {
         List<User> objects = (List<User>) HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From User ").list();
         return objects;
+    }
+
+    public User findByLogin(String login) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        Query<User> query = session.createNamedQuery("Find user by login", User.class).setParameter("login",login);
+        User result = query.getSingleResult();
+        transaction.commit();
+        session.close();
+        return result;
     }
 }

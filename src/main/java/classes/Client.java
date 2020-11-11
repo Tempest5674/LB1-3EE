@@ -5,11 +5,13 @@ import org.hibernate.search.annotations.Field;
 import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Indexed;
 import org.hibernate.search.annotations.Store;
+import org.hibernate.annotations.NamedQuery;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NamedQuery(name = "Select all clients",query = "from Client")
 @Table(name = "client")
 @Indexed
 public class Client {

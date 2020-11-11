@@ -2,13 +2,10 @@ package dao;
 
 import classes.Rent;
 import interfaces.DAO;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.search.FullTextSession;
-import org.hibernate.search.Search;
+import org.hibernate.*;
+import org.hibernate.search.*;
 import org.hibernate.search.query.dsl.QueryBuilder;
 import utils.HibernateSessionFactoryUtil;
-
 import java.util.List;
 
 public class RentDAO implements DAO<Rent> {

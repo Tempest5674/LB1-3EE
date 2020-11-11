@@ -2,11 +2,8 @@ package servlets;
 
 import classes.User;
 import services.DaoService;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.*;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 public class loginServlet extends HttpServlet {
@@ -14,12 +11,9 @@ public class loginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("uname");
         String password = req.getParameter("psw");
-        User user = null;
-        try {
-            user = DaoService.userDAO.search("login", login).get(0);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+        User user = DaoService.userDAO.findByLogin(login);;
+
         if(user!=null&&user.getPassword().equals(password)){
             req.setAttribute("role",user.getRole());
             req.getRequestDispatcher("index.jsp").forward(req, resp);

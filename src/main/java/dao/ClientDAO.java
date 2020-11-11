@@ -11,7 +11,6 @@ import utils.HibernateSessionFactoryUtil;
 
 import java.util.List;
 
-
 public class ClientDAO implements DAO<Client> {
 
     public List<Client> currentObjects;
