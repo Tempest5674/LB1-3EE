@@ -1,7 +1,6 @@
 package servlets;
 
 import classes.*;
-import com.sun.org.apache.regexp.internal.RE;
 import services.DaoService;
 
 import javax.servlet.ServletException;
