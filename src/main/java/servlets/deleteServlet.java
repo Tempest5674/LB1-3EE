@@ -3,12 +3,14 @@ package servlets;
 import classes.*;
 import services.DaoService;
 
+import javax.ejb.Singleton;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Singleton
 public class deleteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -7,8 +7,12 @@ import org.hibernate.search.FullTextSession;
 import org.hibernate.search.Search;
 import org.hibernate.search.query.dsl.QueryBuilder;
 import utils.HibernateSessionFactoryUtil;
+
+import javax.ejb.Remove;
+import javax.ejb.Stateful;
 import java.util.List;
 
+@Stateful
 public class CarDAO implements DAO<Car> {
 
     List<Car> currentObjects;
@@ -47,6 +51,7 @@ public class CarDAO implements DAO<Car> {
         session.close();
     }
 
+    @Remove
     @Override
     public void delete(Car obj) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
